@@ -32,9 +32,23 @@ Editing the S3 Bucket policy to deny the upload of files that are unencrypted:  
 <img src="https://i.imgur.com/3QB8QKy.png" height="80%" width="80%" alt="Architecture"/>
 <br />
 ## The condition portion of the policy at the bottom expresses that server-side-encryption needs to be within AWS:KMS. But since the overall policy's "Effect" is "Deny", any object that was not encrypted with AWS KMS sever side encryption would not get uploaded into this bucket.
-  
+
 <p align="center">
 Re-editing the policy to use only the customer managed key:  <br/>
 <img src="https://i.imgur.com/EkKtKPc.png" height="80%" width="80%" alt="Architecture"/>
 <br />
 ## I edited the policy a second time to be even more specific about the encryption requirements and narrow it down to the CMK that was created in the first step
+<br />
+<br />
+<p align="center">
+Verifying failed upload of unencrypted file: <br/>
+<img src="https://i.imgur.com/xzQUuv6.png" height="80%" width="80%" alt="Architecture"/>
+<br />
+<br />
+<p align="center">
+Confirming successful upload of encrypted file: <br/>
+<img src="https://i.imgur.com/bcWrwTT.png" height="80%" width="80%" alt="Architecture"/>
+
+
+  
+  
