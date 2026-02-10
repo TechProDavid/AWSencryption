@@ -11,35 +11,30 @@ Considering the importance of data security for anyone who stores data in the cl
 
 <h2>Environments Used </h2>
 
-- <b>AWS Console</b> (21H2)
+- <b>AWS Console</b> 
 
-<h2>Program walk-through:</h2>
+<h2>Lab Walk-Through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Final Architecture after encryption: <br/>
+<img src="https://i.imgur.com/JkGhel7.png" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Creating the Customer Managed Key:  <br/>
+<img src="https://i.imgur.com/5QwrUIx.png" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Editing the key policy in JSON format: <br/>
+<img src="https://i.imgur.com/pDgHVSB.png" height="80%" width="80%" alt=""/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Editing the S3 Bucket policy to deny the upload of files that are unencrypted:  <br/>
+<img src="https://i.imgur.com/3QB8QKy.png" height="80%" width="80%" alt="Architecture"/>
 <br />
+## The condition portion of the policy at the bottom expresses that server-side-encryption needs to be within AWS:KMS. But since the overall policy's "Effect" is "Deny", any object that was not encrypted with AWS KMS sever side encryption would not get uploaded into this bucket.
+  
+<p align="center">
+Re-editing the policy to use only the customer managed key:  <br/>
+<img src="https://i.imgur.com/EkKtKPc.png" height="80%" width="80%" alt="Architecture"/>
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+## I edited the policy a second time to be even more specific about the encryption requirements and narrow it down to the CMK that was created in the first step
