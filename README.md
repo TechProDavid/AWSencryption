@@ -17,22 +17,21 @@ Considering the importance of data security for anyone who stores data in the cl
 
 <p align="center">
 Final Architecture after encryption: <br/>
-<img src="https://github.com/TechProDavid/AWSencryption/blob/main/Cloud%20Environment%20-%20after%20encryption.png?raw=true" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/Files/blob/main/Cloud%20Environment%20-%20after%20encryption.png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
 Creating the Customer Managed Key:  <br/>
-<img src="[https://i.imgur.com/5QwrUIx.png](https://github.com/TechProDavid/AWSencryption/blob/main/S3%20&%20Bucket%20Policy%20lab%20(9).png?raw=true)" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/AWSencryption/blob/main/S3%20&%20Bucket%20Policy%20lab%20(9).png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
 Editing the key policy in JSON format: <br/>
-<img src="https://i.imgur.com/pDgHVSB.png" height="80%" width="80%" alt=""/>
+<img src="https://github.com/TechProDavid/AWSencryption/blob/main/S3%20and%20Bucket%20Policy%20lab%20(1).png?raw=true" height="80%" width="80%" alt=""/>
 <br />
 <br />
 Editing the S3 Bucket policy to deny the upload of files that are unencrypted:  <br/>
-<img src="https://i.imgur.com/3QB8QKy.png" height="80%" width="80%" alt="Architecture"/>
+<img src="" height="80%" width="80%" alt="Architecture"/>
 <br />
 ## The condition portion of the policy at the bottom expresses that server-side-encryption needs to be within AWS:KMS. But since the overall policy's "Effect" is "Deny", any object that was not encrypted with AWS KMS sever side encryption would not get uploaded into this bucket.
-
 <p align="center">
 Re-editing the policy to use only the customer managed key:  <br/>
 <img src="https://i.imgur.com/EkKtKPc.png" height="80%" width="80%" alt="Architecture"/>
