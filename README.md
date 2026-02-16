@@ -21,32 +21,37 @@ Final Architecture after encryption: <br/>
 <br />
 <br />
 Creating the Customer Managed Key:  <br/>
-<img src="https://github.com/TechProDavid/AWSencryption/blob/main/S3%20&%20Bucket%20Policy%20lab%20(9).png?raw=true" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/Files/blob/main/S3%20&%20Bucket%20Policy%20lab%20(9).png?raw=true" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/Files/blob/main/S3%20and%20Bucket%20Policy%20lab%20(4).png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
 Editing the key policy in JSON format: <br/>
-<img src="https://github.com/TechProDavid/AWSencryption/blob/main/S3%20and%20Bucket%20Policy%20lab%20(1).png?raw=true" height="80%" width="80%" alt=""/>
+<img src="https://github.com/TechProDavid/Files/blob/main/S3%20and%20Bucket%20Policy%20lab%20(5).png?raw=true" height="80%" width="80%" alt=""/>
 <br />
 <br />
 Editing the S3 Bucket policy to deny the upload of files that are unencrypted:  <br/>
-<img src="" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/Files/blob/main/S3%20and%20Bucket%20Policy%20lab%20(2).png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
 ## The condition portion of the policy at the bottom expresses that server-side-encryption needs to be within AWS:KMS. But since the overall policy's "Effect" is "Deny", any object that was not encrypted with AWS KMS sever side encryption would not get uploaded into this bucket.
 <p align="center">
 Re-editing the policy to use only the customer managed key:  <br/>
-<img src="https://i.imgur.com/EkKtKPc.png" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/Files/blob/main/S3%20&%20Bucket%20Policy%20lab%20(8).png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
 ## I edited the policy a second time to be even more specific about the encryption requirements and narrow it down to the CMK that was created in the first step
 <br />
 <br />
 <p align="center">
 Verifying failed upload of unencrypted file: <br/>
-<img src="https://i.imgur.com/xzQUuv6.png" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/Files/blob/main/Verifying%20unencrypted%20policy.png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
 <p align="center">
+Uploading a file using the key created:<br/>
+<img src="https://github.com/TechProDavid/Files/blob/main/S3%20&%20Bucket%20Policy%20lab%20(7).png?raw=true" height="80%" width="80%" alt="Architecture"/>
+<br />
+<br />
 Confirming successful upload of encrypted file: <br/>
-<img src="https://i.imgur.com/bcWrwTT.png" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/Files/blob/main/Verifying%20that%20policy%20works%20for%20encrypted%20files.png?raw=true" height="80%" width="80%" alt="Architecture"/>
 
 
   
