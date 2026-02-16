@@ -37,7 +37,7 @@ Editing the S3 Bucket policy to deny the upload of files that are unencrypted:  
 Re-editing the policy to use only the customer managed key:  <br/>
 <img src="https://github.com/TechProDavid/Files/blob/main/S3%20&%20Bucket%20Policy%20lab%20(8).png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
-## I edited the policy a second time to be even more specific about the encryption requirements and narrow it down to the CMK that was created in the first step
+## I edited the policy a second time to be more specific about the encryption requirements and narrow it down to the CMK that was created in the first step
 <br />
 <br />
 <p align="center">
