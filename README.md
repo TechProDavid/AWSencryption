@@ -21,7 +21,7 @@ Final Architecture after encryption: <br/>
 <br />
 <br />
 Creating the Customer Managed Key:  <br/>
-<img src="https://i.imgur.com/5QwrUIx.png" height="80%" width="80%" alt="Architecture"/>
+<img src="[https://i.imgur.com/5QwrUIx.png](https://github.com/TechProDavid/AWSencryption/blob/main/S3%20&%20Bucket%20Policy%20lab%20(9).png?raw=true)" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
 Editing the key policy in JSON format: <br/>
