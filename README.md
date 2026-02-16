@@ -17,7 +17,7 @@ Considering the importance of data security for anyone who stores data in the cl
 
 <p align="center">
 Final Architecture after encryption: <br/>
-<img src="https://i.imgur.com/JkGhel7.png" height="80%" width="80%" alt="Architecture"/>
+<img src="https://github.com/TechProDavid/AWSencryption/blob/main/Cloud%20Environment%20-%20after%20encryption.png?raw=true" height="80%" width="80%" alt="Architecture"/>
 <br />
 <br />
 Creating the Customer Managed Key:  <br/>
