@@ -1,3 +1,4 @@
+
 <h1>S3 Object encryption</h1>
 
 <h2>Description</h2>
@@ -7,12 +8,11 @@ Considering the importance of data security for anyone who stores data in the cl
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>JavaScript Object Notation</b> 
-
+- <b>JavaScript Object Notation</b>
+  
+- <b>AWS Console</b>
+  
 <h2>Environments Used </h2>
-
-- <b>AWS Console</b> 
-
 <h2>Lab Walk-Through:</h2>
 
 <p align="center">
